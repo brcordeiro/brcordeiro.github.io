@@ -1,0 +1,47 @@
+{
+    "timeline":
+    {
+        "headline":"Elizabeth Taylor<br/> 1932-2011",
+		"startDate":"1932",
+        "text":"<p>The actress,renowned for her beauty, talent and eventful personal life, was one of the last stars left from Hollywood's golden age. A look at some of the milestones in her life.</p><p>This is demo prototype of this timeline tool. The test content orginates from The New York Time's interactive feature <br/><a href='http://www.nytimes.com/interactive/2011/03/23/movies/20110323-ELIZABETH-TAYLOR-TIMELINE.html' onclick = 'void(0)'>Elizabeth Taylor: 1932-2011</a>.</p>",
+        "type":"default",
+		"asset":
+        {
+            "credit":"",
+            "caption":""
+        },
+		"date": [
+            {
+                "startDate":"2004,11,1",
+                "headline":"Reveals Congestive Heart Failure",
+                "text":"Ms. Taylor disclosed that she had congestive heart failure,a disorder in which the heart ",
+                "related":"",
+                "tags":"Personal life"
+            },
+            {
+                "startDate":"1987,1,1",
+                "headline":"Debut of Perfume Line",
+                "text":"In the 1980s and 1990s, Ms. Taylor arguably became better known for her line of perfumes than her acting. Passion, her first licensed product, was released in 1987. White Diamonds followed in 1991.",
+                "asset":
+                {
+                    "media":"http://youtu.be/vjVfu8-Wp6s",
+                    "credit":"Robin Weiner\/Associated Press",
+                    "caption":"Elizabeth Taylor, with Earvin \"Magic\" Johnson, at an AIDS fundraiser in 1997."
+                },
+                "tags":"Career"
+            },
+            {
+                "startDate":"1942",
+                "headline":"Screen Debut",
+                "text":"Ms. Taylor signed her first movie contract with Universal Pictures in 1941 and made her screen debut, at age 9, the following year in \"There's One Born Every Minute.\"\nMs. Taylor signed with Metro-Goldwyn-Mayer later in 1942 after Universal canceled her contract. \"Lassie Come Home\" (1943) was her first film for MGM; the studio went on to produce most of Ms. Taylor's most notable films.",
+                "tags":"Career"
+            },
+            {
+                "startDate":"1932,2,27",
+                "headline":"Born in London",
+                "text":"<p>Elizabeth Rosemond Taylor was born in London to American parents, Sara Warmbrodt (the actress Sara Sothern) and Francis Taylor. Ms. Taylor was a dual citizen of England and the United States.\nIn 1939, when World War II began, the Taylors returned to America and eventually settled in Los Angeles.</p>",
+                "tags":"Personal life"
+            }
+        ]
+    }
+}
