@@ -17,6 +17,9 @@ url: "brcordeiro.github.io" # the base hostname & protocol for your site
 twitter_username:     __bcordeiro  # Replace this with your Twitter username
 github_username:      brcordeiro  # Replace this with your GitHub username
 linkedin_username:    brcordeiro  # Replace this with your LinkedIn username
+google_plus_username: example  # Replace this with your Google+ username
+facebook_username:    example  # Replace this with your Facebook username
+dribbble_username:    example  # Replace this with your Dribbble username
 
 # Build settings
 markdown: kramdown
