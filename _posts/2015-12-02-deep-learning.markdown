@@ -2,8 +2,7 @@
 layout: post
 ---
 
-<img src="/images/fulls/01.jpg" class="fit image"> Deep Learning is branch of Artificial Intelligence that tries developing machines that perceive and understand the world, trying to get closer to how a human brain works. Human information processing mechanisms like vision and audition, suggest the need of deep architectures for extracting
- complex structure and building internal representation from rich sensory inputs.
+<img src="/images/fulls/01.jpg" class="fit image"> Deep Learning is branch of Artificial Intelligence that tries to develop machines that perceive and understand the world, trying to get closer to how a human brain works. Human information processing mechanisms like vision and audition, suggest the need of deep architectures for extracting complex structure and building internal representation from rich sensory inputs.
 
 Many internet companies, are using deep learning in research and production, normally focused on trying to solve perceptual tasks. Some of those tasks are Image Classification, Pedestrian Detection, Speech Recognition and Speech Translation. Among the world's largest companies that are using it we can find Facebook, Flickr, Netflix, Yandex and Baidu.
 
