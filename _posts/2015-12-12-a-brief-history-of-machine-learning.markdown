@@ -2,7 +2,7 @@
 layout: post
 ---
 <img src="/images/fulls/04.jpg" class="fit image">
-In my first article <a href="http://brcordeiro.github.io/2015/11/29/are-we-creating-terminators-%3F.html">"Are we creating Terminators?"</a> I wrote about what is Machine Learning. Now, let's know some of
+In my first article <a href="http://brcordeiro.github.io/2015/11/29/are-we-creating-terminators-%3F.html" target="blank">"Are we creating Terminators?"</a> I wrote about what is Machine Learning. Now, let's know some of
 the scientists that have contributed to this field over the last six decades. Has someone watched the movie "The imitation game"? I think you have already heard about our first one:
 
 <h2>Alan Turing</h2>
