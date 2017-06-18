@@ -1,8 +1,11 @@
 ---
 layout: post
+title: Nodejs And Scalability Issues
 ---
 <img src="/images/fulls/08.jpg" class="fit image">
-There are some problems that impact growth technology companies and sometimes they don't pay attention to them. One of them is downtime of their site potentially costing millions of dollars. This downtime most often is a result of an architecture that does not scale on demand as consumer transactions grow at ever increasing rates. The another one is a failure in the company and organizational process to quickly correct not only the current availability issues, but the longer term needs for future scale. The last one is the failure of the organization to correct the outages and processes resulting in more time being spent on technology failures and less time being spent on new products and features.
+There are some problems that impact growth technology companies and sometimes they don't pay attention to them. One of them is downtime of their site potentially costing millions of dollars. This downtime most often is a result of an architecture that does not scale on demand as consumer transactions grow at ever increasing rates.
+
+The another one is a failure in the company and organizational process to quickly correct not only the current availability issues, but the longer term needs for future scale. The last one is the failure of the organization to correct the outages and processes resulting in more time being spent on technology failures and less time being spent on new products and features.
 
 So, how may it be solved? A clever way is use events instead of threads to keep the machine busy. Why and how does it work?  Web servers spend most of their time waiting for files to load and databases to answer requests anyway, so why not serve other requests meanwhile?
 Node.js replicates this model by using JavaScript continuations: it keeps a stack of functions waiting to be run when the right event comes along. It may be a file that finished loading or a database request that finally got served after all these milliseconds, the node binary runs the first function in the stack that has received the event it was waiting for, and takes care of all the details. This scheme for serving simultaneous requests is unsurprisingly called event-driven. And since a node process does not block while waiting for a file to load but instead goes on to the next task, it is also called non-blocking.

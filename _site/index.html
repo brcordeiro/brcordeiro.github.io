@@ -31,20 +31,19 @@
     <section>
         
             <header class="major">
-                <h2>Nodejs And Scalability Issues</h2>
-                <p class="post-meta">Jan 23, 2016</p>
+                <h2>Naive Bees Classifier using Convolutional Neural Network</h2>
+                <p class="post-meta">May 10, 2016</p>
             </header>
 
             <section>
-                <p><img src="/images/fulls/08.jpg" class="fit image" />
-There are some problems that impact growth technology companies and sometimes they don’t pay attention to them. One of them is downtime of their site potentially costing millions of dollars. This downtime most often is a result of an architecture that does not scale on demand as consumer transactions grow at ever increasing rates. The another one is a failure in the company and organizational process to quickly correct not only the current availability issues, but the longer term needs for future scale. The last one is the failure of the organization to correct the outages and processes resulting in more time being spent on technology failures and less time being spent on new products and features.</p>
+                <p><img src="/images/fulls/11.jpg" class="fit image" /></p>
+<p>Wild bees are important pollinators and the spread of colony collapse disorder has only made their role more critical. Right now it takes a lot of time and effort for researchers to gather data on wild bees. The starting point is to determine the genus - Apis (honey bee) or Bombus (bumble bee) - based on photographs of the insects, using images from BeeSpotter (http://beespotter.org/) for identifying and classifying.</p>
 
-<p>So, how may it be solved? A clever way is use events instead of threads to keep the machine busy. Why and how does it work?  Web servers spend most of their time waiting for files to load and databases to answer requests anyway, so why not serve other requests meanwhile?
-Node.js replicates this model by using JavaScript continuations: it keeps a stack of functions waiting to be run when the right event comes along. It may be a file that finished loading or a database request that finally got served after all these milliseconds, the node binary runs the first function in the stack that has received the event it was waiting for, and takes care of all the details. This scheme for serving simultaneous requests is unsurprisingly called event-driven. And since a node process does not block while waiting for a file to load but instead goes on to the next task, it is also called non-blocking.</p>
+<p>In this article we will build a system that will read the images, scales it, create a dataset to make the classifier work well by creating reflected and translated versions of images. It then takes care of class imbalance by undersampling this enhanced dataset. All this processes data is then stored in numpy arrays.</p>
 
-<p>Now threads are not waking up all the time to find that they have no work to do, each running function has the whole memory to itself and does not need to synchronize with anyone else while running and the machine keeps churning along even when saturated with requests. Keep in mind that events are not magical: the server will still be limited by existing resources such as memory and processing time, so it will have to reject those requests that it cannot serve. But the machine will not collapse in a smoldering pile of ashes (or even worse, become unresponsive!), and your visitors will be grateful for an occasional prompt rejection instead of a shared agonizing wait for nothing.</p>
+<p>The architecture of this Convolutional Neural Network is built on Python, Theano, Lasagne and others additional libraries.</p>
 
-<p>Combining Node.js and microservices architecture may be a good alternative to solve scalability problems and also its impacts on the company financial health.</p>
+<p>The source code is available at https://github.com/brcordeiro</p>
 
             </section>
         
@@ -54,6 +53,63 @@ Node.js replicates this model by using JavaScript continuations: it keeps a stac
             
 
                 <article class="6u 12u(small)">
+                    <header>
+                        <h2><a href="/2016/05/08/life-cycle-of-data-science-projects.html">Life Cycle of Data Science Projects</a></h2>
+                    </header>
+                    <section>
+                        <p><img src="/images/fulls/10.jpg" class="fit image" /></p>
+<p>The software development life cycle is well-known by the most IT specialists. In this article I'm going to present you a life cycle customized to data science.</p>
+
+
+                    </section>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="/2016/05/08/life-cycle-of-data-science-projects.html" class="button">Read More</a></li>
+                        </ul>
+                    </footer>
+                </article>
+
+            
+
+                <article class="6u$ 12u(small)">
+                    <header>
+                        <h2><a href="/2016/02/12/big-data-luigi-and-data-flow.html">Big Data Luigi And Data Flow</a></h2>
+                    </header>
+                    <section>
+                        <p><img src="/images/fulls/09.jpg" class="fit image" />
+The amount of data in our world has been exploding, data comes in from everywhere: cameras, social networks, GPS, mobile phones, and analyzing those large data sets has become a key basis of competition, innovation, and consumer needs. We are living the called Big Data Age. Big Data, is defined by Gartner as high-volume, high-velocity, and high variety information assets that demand cost-effective, innovative forms of information processing that enable enhanced insight, decision making, and process automation.</p>
+
+
+                    </section>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="/2016/02/12/big-data-luigi-and-data-flow.html" class="button">Read More</a></li>
+                        </ul>
+                    </footer>
+                </article>
+
+            
+
+                <article class="6u 12u(small)">
+                    <header>
+                        <h2><a href="/2016/01/23/nodejs-and-scalability-issues.html">Nodejs And Scalability Issues</a></h2>
+                    </header>
+                    <section>
+                        <p><img src="/images/fulls/08.jpg" class="fit image" />
+There are some problems that impact growth technology companies and sometimes they don&#8217;t pay attention to them. One of them is downtime of their site potentially costing millions of dollars. This downtime most often is a result of an architecture that does not scale on demand as consumer transactions grow at ever increasing rates.</p>
+
+
+                    </section>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="/2016/01/23/nodejs-and-scalability-issues.html" class="button">Read More</a></li>
+                        </ul>
+                    </footer>
+                </article>
+
+            
+
+                <article class="6u$ 12u(small)">
                     <header>
                         <h2><a href="/2016/01/17/microservice-architecture-with-loopback.html">Microservice Architecture With Loopback</a></h2>
                     </header>
@@ -72,7 +128,7 @@ A large number of corporate applications has been built on the monolithic archit
 
             
 
-                <article class="6u$ 12u(small)">
+                <article class="6u 12u(small)">
                     <header>
                         <h2><a href="/2015/12/12/a-brief-history-of-machine-learning.html">A Brief History Of Machine Learning</a></h2>
                     </header>
@@ -92,7 +148,7 @@ the scientists that have contributed to this field over the last six decades. Ha
 
             
 
-                <article class="6u 12u(small)">
+                <article class="6u$ 12u(small)">
                     <header>
                         <h2><a href="/2015/12/05/deep-learning-with-keras-and-tensorflow.html">Deep Learning With Keras And Tensorflow</a></h2>
                     </header>
@@ -111,13 +167,13 @@ Google, through your subsidiary Alphabet, has announced its latest machine learn
 
             
 
-                <article class="6u$ 12u(small)">
+                <article class="6u 12u(small)">
                     <header>
                         <h2><a href="/2015/12/04/volunteering.html">Volunteering</a></h2>
                     </header>
                     <section>
                         <p><img src="/images/fulls/02.jpg" class="fit image" />
-I’m often hearing people talking about work-life, personal life and how they try to balance it. Ok, few years ago, I was in the same group. Then, something great happened into my life: I started to travel. Somehow, who I was never came back from the first trip. I couldn’t see the world as the same way, I realized that the world is not so big as we usually think and each person has something in common to each other, doesn’t matter the difference of culture. You might be wondering – Ok, nice story, but how it is connected to a tech blog? Calm down, I will get there.</p>
+I’m often hearing people talking about work-life, personal life and how they try to balance it. Ok, few years ago, I was in the same group. Then, something great happened into my life: I started to travel. Somehow, who I was never came back from the first trip. I couldn’t see the world as the same way, I realized that the world is not so big as we usually think and each person has something in common to each other, doesn’t matter the difference of culture.</p>
 
 
                     </section>
@@ -130,7 +186,7 @@ I’m often hearing people talking about work-life, personal life and how they t
 
             
 
-                <article class="6u 12u(small)">
+                <article class="6u$ 12u(small)">
                     <header>
                         <h2><a href="/2015/12/02/deep-learning.html">Deep Learning</a></h2>
                     </header>
@@ -148,9 +204,9 @@ I’m often hearing people talking about work-life, personal life and how they t
 
             
 
-                <article class="6u$ 12u(small)">
+                <article class="6u 12u(small)">
                     <header>
-                        <h2><a href="/2015/11/29/are-we-creating-terminators-%3F.html">Are We Creating Terminators ?</a></h2>
+                        <h2><a href="/2015/11/29/are-we-creating-terminators.html">Are We Creating Terminators</a></h2>
                     </header>
                     <section>
                         <p><img src="/images/fulls/03.jpg" class="fit image" /> What are you working on? That’s a common question when you are meeting someone new or having a dinner with old friends. So, the answer for this question was quite easy for me in the past, it was something like “I work in Tech”, and  then some comment like “you know, my computer is broken and…” came with. Few years back, this answer has changed for “I work with Machine Learning” and then more questions come with that, like “Is it something like the Terminator movies?”. So, I’ve decided to write about what exactly is Machine Learning.</p>
@@ -159,7 +215,7 @@ I’m often hearing people talking about work-life, personal life and how they t
                     </section>
                     <footer>
                         <ul class="actions">
-                            <li><a href="/2015/11/29/are-we-creating-terminators-%3F.html" class="button">Read More</a></li>
+                            <li><a href="/2015/11/29/are-we-creating-terminators.html" class="button">Read More</a></li>
                         </ul>
                     </footer>
                 </article>

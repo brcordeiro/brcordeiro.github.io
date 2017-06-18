@@ -1,5 +1,6 @@
 ---
 layout: post
+title: Microservice Architecture With Loopback
 ---
 <img src="/images/fulls/07.jpg" class="fit image">
 A large number of corporate applications has been built on the monolithic architecture model. It works for small applications when the development process, tests and implementation are simple. However, for big and complexes applications, the monolithic architecture may be an obstacle to development and implementation, hinders the use of a continuous delivery and limit the adoption of new technologies.
