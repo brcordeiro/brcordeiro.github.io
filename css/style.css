@@ -116,7 +116,7 @@ figure {
   width: 300px;
   position: fixed;
   z-index: 1001;
-    background-color: #f9bf3f;
+    background-color: #1b6d85;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
@@ -129,7 +129,7 @@ figure {
       -o-transform: translateX(-300px);
       transform: translateX(-300px);
       padding-top: 4em;
-	  background-color: #f9bf3f;
+	  background-color: #1b6d85;
         height: auto;
       } }
   #colorlib-aside .author-img {
@@ -141,7 +141,10 @@ figure {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%;
-    border: 3px solid white;}
+    border: 3px solid #fff;}
+  #colorlib-aside p{
+      color: #000;
+  }
 #colorlib-aside h1{
     color: #000;
   font-family: 'Raleway', sans-serif;
