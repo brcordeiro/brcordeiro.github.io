@@ -110,6 +110,7 @@ figure {
   position: relative; }
 
 #colorlib-aside {
+  color: #fff;
   padding-top: 3em;
   padding-bottom: 1px;
   float:left;
@@ -143,10 +144,10 @@ figure {
     border-radius: 50%;
     border: 3px solid #fff;}
   #colorlib-aside p{
-      color: #000;
+      color: #fff;
   }
 #colorlib-aside h1{
-    color: #000;
+    color: #fff;
   font-family: 'Raleway', sans-serif;
 }
   #colorlib-aside .position {
@@ -164,7 +165,7 @@ figure {
     #colorlib-aside #colorlib-logo a {
       display: block;
       text-align: center;
-      color: #000;
+      color: #fff;
       padding-right: .3em;}
   #colorlib-aside #colorlib-main-menu {
     display: block;
