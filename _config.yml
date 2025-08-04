@@ -13,7 +13,7 @@ title                    : "Bruno Cordeiro"
 title_separator          : "-"
 name                     : &name "Bruno Cordeiro"
 description              : &description "Data Science & Engineering"
-baseurl                  : "https://github.com/brcordeiro"
+baseurl                  : ""
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
