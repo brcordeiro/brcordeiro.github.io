@@ -8,13 +8,14 @@
 
 # Basic Site Settings
 locale                   : "en-US"
+timezone                 : "UTC"
 site_theme               : "default"
 title                    : "Bruno Cordeiro"
 title_separator          : "-"
 name                     : &name "Bruno Cordeiro"
 description              : &description "Data Science & Engineering"
-url                      : https://brcordeiro.github.io
-baseurl                  : /
+url                      : ""
+baseurl                  : ""
 
 
 # Site Author - The following control what appear as part of the author content on the side bar.
@@ -291,6 +292,15 @@ defaults:
 sass:
   sass_dir: _sass
   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  quiet_deps: true
+  # Vendored legacy Breakpoint/Susy files emit Dart Sass deprecations that are
+  # still compatible with the current Jekyll build and do not affect the site.
+  silence_deprecations:
+    - import
+    - global-builtin
+    - if-function
+    - slash-div
+    - color-functions
 
 
 # Outputting
