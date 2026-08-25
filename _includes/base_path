@@ -1,5 +1,21 @@
+{% assign is_local_url = false %}
 {% if site.url %}
-  {% assign base_path = site.url | append: site.baseurl %}
-{% else %}
+  {% assign site_url = site.url | downcase %}
+  {% if site_url contains 'localhost' or site_url contains '0.0.0.0' or site_url contains '127.0.0.1' %}
+    {% assign is_local_url = true %}
+  {% endif %}
+{% endif %}
+
+{% if site.url and site.url != '' and is_local_url == false %}
+  {% assign base_path = site.url %}
+  {% if site.baseurl and site.baseurl != '/' %}
+    {% assign base_path = base_path | append: site.baseurl %}
+  {% endif %}
+{% elsif site.github.url and site.github.url != '' %}
   {% assign base_path = site.github.url %}
+  {% if site.baseurl and site.baseurl != '/' %}
+    {% assign base_path = base_path | append: site.baseurl %}
+  {% endif %}
+{% else %}
+  {% assign base_path = '' %}
 {% endif %}

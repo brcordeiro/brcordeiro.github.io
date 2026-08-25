@@ -9,6 +9,9 @@ let determineThemeSetting = () => {
   return (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") ? "system" : themeSetting;
 };
 
+// Detect OS/browser preference safely across browsers.
+const browserPref = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
 // Determine the computed theme, which can be "dark" or "light". If the theme setting is
 // "system", the computed theme is determined based on the user's system preference.
 let determineComputedTheme = () => {
@@ -16,11 +19,8 @@ let determineComputedTheme = () => {
   if (themeSetting != "system") {
     return themeSetting;
   }
-  return (userPref && userPref("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+  return browserPref;
 };
-
-// detect OS/browser preference
-const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
 // Set the theme on page load or when explicitly called
 let setTheme = (theme) => {
@@ -45,6 +45,9 @@ var toggleTheme = () => {
   const new_theme = current_theme === "dark" ? "light" : "dark";
   localStorage.setItem("theme", new_theme);
   setTheme(new_theme);
+  if (typeof redrawPlotly === "function") {
+    redrawPlotly();
+  }
 };
 
 /* ==========================================================================
@@ -56,27 +59,33 @@ var toggleTheme = () => {
 // actually present on the page.
 import { plotlyDarkLayout, plotlyLightLayout } from './theme.js';
 let plotlyElements = document.querySelectorAll("pre>code.language-plotly");
+const renderPlotlyTheme = (elem) => {
+  var jsonData = JSON.parse(elem.textContent);
+  const chartElement = $(elem).parent().next().get(0) || document.createElement("div");
+
+  if (!$(elem).parent().next().length) {
+    elem.parentElement.classList.add("hidden");
+    elem.parentElement.after(chartElement);
+  }
+
+  const theme = (determineComputedTheme() === "dark") ? plotlyDarkLayout : plotlyLightLayout;
+  if (jsonData.layout) {
+    jsonData.layout.template = (jsonData.layout.template) ? { ...theme, ...jsonData.layout.template } : theme;
+  } else {
+    jsonData.layout = { template: theme };
+  }
+  Plotly.react(chartElement, jsonData.data, jsonData.layout);
+};
+
+function redrawPlotly() {
+  if (!plotlyElements || !plotlyElements.length) { return; }
+  plotlyElements.forEach((elem) => renderPlotlyTheme(elem));
+}
+
 if (plotlyElements.length > 0) {
   document.addEventListener("readystatechange", () => {
     if (document.readyState === "complete") {
-      plotlyElements.forEach((elem) => {
-        // Parse the Plotly JSON data and hide it
-        var jsonData = JSON.parse(elem.textContent);
-        elem.parentElement.classList.add("hidden");
-
-        // Add the Plotly node
-        let chartElement = document.createElement("div");
-        elem.parentElement.after(chartElement);
-
-        // Set the theme for the plot and render it
-        const theme = (determineComputedTheme() === "dark") ? plotlyDarkLayout : plotlyLightLayout;
-        if (jsonData.layout) {
-          jsonData.layout.template = (jsonData.layout.template) ? { ...theme, ...jsonData.layout.template } : theme;
-        } else {
-          jsonData.layout = { template: theme };
-        }
-        Plotly.react(chartElement, jsonData.data, jsonData.layout);
-      });
+      plotlyElements.forEach((elem) => renderPlotlyTheme(elem));
     }
   });
 }

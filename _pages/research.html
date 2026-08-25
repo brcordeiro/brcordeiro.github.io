@@ -1,0 +1,19 @@
+---
+layout: archive
+title: "Research & Notes"
+permalink: /notes/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p class="page__lead">Short technical explorations, paper summaries, and half-formed ideas. Things that didn't quite fit the blog format.</p>
+
+{% assign sorted_notes = site.notes | sort: "date" | reverse %}
+{% if sorted_notes.size > 0 %}
+  {% for post in sorted_notes %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% else %}
+<p class="page__meta" style="margin-top: 2em;">Notes coming soon.</p>
+{% endif %}
