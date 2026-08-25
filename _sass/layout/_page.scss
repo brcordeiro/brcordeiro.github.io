@@ -225,6 +225,14 @@
    Page meta
    ========================================================================== */
 
+.page__date {
+  color: var(--global-text-color-light);
+
+  strong {
+    font-weight: normal;
+  }
+}
+
 .page__meta {
   margin-top: 2em;
   color: var(--global-text-color-light);

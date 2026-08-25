@@ -1,0 +1,159 @@
+shelves:
+  - name: "Causal Inference"
+    books:
+      - title: "The Book of Why"
+        author: "Judea Pearl & Dana Mackenzie"
+        year: 2018
+      - title: "Causal Inference and Discovery in Python"
+        author: "Aleksander Molak"
+        year: 2023
+
+  - name: "Statistics & Probabilistic Methods"
+    books:
+      - title: "Bayesian Analysis with Python"
+        author: "Osvaldo Martin"
+        year: 2022
+      - title: "Practical Guide to Applied Conformal Prediction in Python"
+        author: "Valeriy Manokhin"
+        year: 2023
+      - title: "Modern Time Series Forecasting with Python"
+        author: "Manu Joseph"
+        year: 2022
+      - title: "Random Processes in Physics and Finance"
+        author: "Melvin Lax, Wei Cai & Min Xu"
+        year: 2006
+
+  - name: "Machine Learning & AI"
+    books:
+      - title: "Mastering Machine Learning Algorithms"
+        author: "Giuseppe Bonaccorso"
+        year: 2018
+      - title: "Build a Large Language Model (From Scratch)"
+        author: "Sebastian Raschka"
+        year: 2024
+      - title: "Human Compatible"
+        author: "Stuart Russell"
+        year: 2019
+      - title: "Empire of AI"
+        author: "Karen Hao"
+        year: 2025
+      - title: "Mathematical Cognition Researcher"
+      - title: "Introduction to Evolutionary Informatics"
+        author: "Robert J. Marks II, William A. Dembski & Winston Ewert"
+        year: 2017
+
+  - name: "Neuromorphic & Biological Systems"
+    books:
+      - title: "Neuromorphic Silicon Neuron Circuits"
+      - title: "Neuromorphic Photonics"
+        author: "Paul R. Prucnal & Bhavin J. Shastri"
+        year: 2017
+
+  - name: "Risk, Uncertainty & Finance"
+    books:
+      - title: "The Black Swan"
+        author: "Nassim Nicholas Taleb"
+        year: 2007
+      - title: "Against the Gods"
+        author: "Peter L. Bernstein"
+        year: 1996
+      - title: "The Psychology of Money"
+        author: "Morgan Housel"
+        year: 2020
+      - title: "Angrynomics"
+        author: "Eric Lonergan & Mark Blyth"
+        year: 2020
+
+  - name: "Behavioral Economics & Decision Theory"
+    books:
+      - title: "Thinking, Fast and Slow"
+        author: "Daniel Kahneman"
+        year: 2011
+      - title: "Misbehaving"
+        author: "Richard Thaler"
+        year: 2015
+      - title: "Predictably Irrational"
+        author: "Dan Ariely"
+        year: 2008
+      - title: "Decoded"
+        author: "Phil Barden"
+        year: 2013
+      - title: "Honeybee Democracy"
+        author: "Thomas D. Seeley"
+        year: 2010
+
+  - name: "Neuroscience & Cognition"
+    books:
+      - title: "Descartes' Error"
+        author: "Antonio Damasio"
+        year: 1994
+      - title: "Why Zebras Don't Get Ulcers"
+        author: "Robert M. Sapolsky"
+        year: 2004
+      - title: "Behave"
+        author: "Robert M. Sapolsky"
+        year: 2017
+      - title: "How Emotions Are Made"
+        author: "Lisa Feldman Barrett"
+        year: 2017
+      - title: "The Forgetting Machine"
+        author: "Rodrigo Quian Quiroga"
+        year: 2017
+      - title: "Consciousness and the Brain"
+        author: "Stanislas Dehaene"
+        year: 2014
+      - title: "The Number Sense"
+        author: "Stanislas Dehaene"
+        year: 1997
+      - title: "The Myth of Mirror Neurons"
+        author: "Gregory Hickok"
+        year: 2014
+      - title: "The Emperor's New Mind"
+        author: "Roger Penrose"
+        year: 1989
+
+  - name: "Language & Meaning"
+    books:
+      - title: "Metaphors We Live By"
+        author: "George Lakoff & Mark Johnson"
+        year: 1980
+      - title: "Models, Metaphor and Meaning"
+        author: "Joe Danielewicz"
+        year: 2020
+
+  - name: "Philosophy & Critical Theory"
+    books:
+      - title: "Simulacra and Simulation"
+        author: "Jean Baudrillard"
+        year: 1981
+      - title: "Homo Sacer"
+        author: "Giorgio Agamben"
+        year: 1995
+      - title: "Blank Space"
+        author: "W. David Marx"
+        year: 2025
+
+  - name: "Society, Culture & Technology"
+    books:
+      - title: "The Culture Map"
+        author: "Erin Meyer"
+        year: 2014
+      - title: "Built on Trust"
+        author: "Arky Ciancutti & Thomas L. Steding"
+        year: 2000
+      - title: "Outbreaks"
+        author: "Jerry D. Rose"
+        year: 1982
+      - title: "Societal Codependency"
+        author: "Gerald Radlauer, M.D."
+      - title: "Manufacturing Consent"
+        author: "Noam Chomsky & Edward S. Herman"
+        year: 1988
+      - title: "Enshittification"
+        author: "Cory Doctorow"
+      - title: "The Age of Extraction"
+        author: "Tim Wu"
+        year: 2025
+      - title: "The Subtle Art of Folding Space"
+        author: "John Chu"
+        year: 2026

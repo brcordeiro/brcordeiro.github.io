@@ -1,0 +1,29 @@
+---
+layout: archive
+title: "Reading List"
+permalink: /reading/
+author_profile: true
+---
+
+{% include base_path %}
+
+<p class="page__lead">Books that have shaped how I think about risk, causality, markets, and ideas.</p>
+
+{% for shelf in site.data.books.shelves %}
+<div class="reading-shelf">
+  <h2 class="reading-shelf__title">{{ shelf.name }}</h2>
+  {% for book in shelf.books %}
+  <div class="reading-item">
+    <div class="reading-item__meta">
+      <span class="reading-item__title">{{ book.title }}</span>
+      <span class="reading-item__sep">·</span>
+      <span class="reading-item__author">{{ book.author }}</span>
+      <span class="reading-item__year">{{ book.year }}</span>
+    </div>
+    {% if book.note %}
+    <p class="reading-item__note">{{ book.note }}</p>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endfor %}
