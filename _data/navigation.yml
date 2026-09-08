@@ -7,5 +7,7 @@ main:
     url: "/notes/"
   - title: "Portfolio"
     url: "/portfolio/"
+  - title: "My Stack"
+    url: "/stack/"
   - title: "Reading"
     url: "/reading/"
