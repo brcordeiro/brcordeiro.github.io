@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Orch OR, LLMs, and the Question of Machine Consciousness"
+related: true
 categories:
   - AI
   - Philosophy

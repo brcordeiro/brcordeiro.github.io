@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Local Cloud Development with Floci and Terraform"
+related: true
 categories:
   - Infrastructure
   - DevOps

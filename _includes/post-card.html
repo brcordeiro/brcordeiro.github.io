@@ -1,0 +1,30 @@
+{% include base_path %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+{% assign cat_slug = post.categories[0] | downcase | replace: " ", "-" %}
+
+<div class="post-card">
+  <a href="{{ base_path }}{{ post.url }}" class="post-card__link">
+    <div class="post-card__thumb post-card__thumb--{{ cat_slug }}">
+      {% if post.categories and post.categories.size > 0 %}
+      <span class="post-category-pill">{{ post.categories | join: " · " }}</span>
+      {% endif %}
+      <p class="post-card__thumb-title">{{ title }}</p>
+    </div>
+    <div class="post-card__body">
+      {% if post.excerpt %}
+      <p class="post-card__excerpt">{{ post.excerpt | markdownify | strip_html | truncatewords: 25 }}</p>
+      {% endif %}
+      <div class="post-card__meta">
+        <span>{{ site.author.name }}</span>
+        <span class="post-card__dot"></span>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+      </div>
+    </div>
+  </a>
+</div>
