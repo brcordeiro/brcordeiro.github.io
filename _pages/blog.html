@@ -7,6 +7,8 @@ author_profile: true
 
 {% include base_path %}
 
+<div class="post-card-grid">
 {% for post in site.posts %}
-  {% include archive-single.html %}
+  {% include post-card.html %}
 {% endfor %}
+</div>
