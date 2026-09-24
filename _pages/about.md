@@ -7,6 +7,8 @@ redirect_from:
   - /about.html
 ---
 
+<img src="{{ '/images/logo-animated.svg' | relative_url }}" alt="Bruno Cordeiro: beyond data" style="max-width:100%">
+
 Over the years, I have worn different hats in data teams, from data analyst to data scientist, current working as a data engineering. I hold a BSc in Computer Science from the Fluminense Federal University (UFF) in Brazil, a Data Science Specialization from Johns Hopkins University, and a MBA in Behavioral Economics from ESPM in Brazil.
 
 My research interests lie in decision-making under uncertainty, with a particular focus on financial engineering. I use data science and statistical methods as tools to better understand life and its many complexities.
